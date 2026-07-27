@@ -1,0 +1,367 @@
+.projects-container {
+    width: 100%;
+    padding: 100px 10%;
+    background: #ffffff;
+}
+
+.app.dark .projects-container {
+    background: #1b1b1b;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.filter-buttons button {
+    padding: 12px 28px;
+    border: 2px solid #0d6efd;
+    background: transparent;
+    color: #0d6efd;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.filter-buttons button:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+.filter-buttons .active {
+    background: #0d6efd;
+    color: white;
+}
+
+.app.dark .filter-buttons button {
+    border-color: #4da3ff;
+    color: #4da3ff;
+}
+
+.app.dark .filter-buttons button:hover,
+.app.dark .filter-buttons .active {
+    background: #4da3ff;
+    color: black;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.app.dark .project-card {
+    background: #222;
+}
+
+.project-header {
+    padding: 25px;
+    background: #0d6efd;
+    color: white;
+}
+
+.app.dark .project-header {
+    background: #4da3ff;
+    color: black;
+}
+
+.project-category {
+    display: inline-block;
+    background: rgba(255,255,255,0.25);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.app.dark .project-category {
+    background: rgba(0,0,0,0.15);
+}
+
+.project-header h2 {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.project-body {
+    padding: 25px;
+    flex: 1;
+}
+
+.project-body p {
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.app.dark .project-body p {
+    color: #d6d6d6;
+}
+
+.project-body h4 {
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.app.dark .project-body h4 {
+    color: #4da3ff;
+}
+
+.technology-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.technology-badge {
+    padding: 8px 14px;
+    background: #eef5ff;
+    color: #0d6efd;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.technology-badge:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+.app.dark .technology-badge {
+    background: #333;
+    color: #4da3ff;
+}
+
+.app.dark .technology-badge:hover {
+    background: #4da3ff;
+    color: black;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 25px;
+    border-top: 1px solid #eeeeee;
+}
+
+.app.dark .project-footer {
+    border-top: 1px solid #333;
+}
+
+.github-btn,
+.demo-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.github-btn {
+    background: #24292e;
+    color: white;
+}
+
+.github-btn:hover {
+    background: #000;
+}
+
+.demo-btn {
+    background: #0d6efd;
+    color: white;
+}
+
+.demo-btn:hover {
+    background: #084298;
+}
+
+.app.dark .demo-btn {
+    background: #4da3ff;
+    color: black;
+}
+
+.app.dark .demo-btn:hover {
+    background: #76bbff;
+}
+
+.project-summary {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    margin-top: 70px;
+}
+
+.summary-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.summary-box:hover {
+    transform: scale(1.05);
+}
+
+.app.dark .summary-box {
+    background: #222;
+}
+
+.summary-box h2 {
+    font-size: 40px;
+    color: #0d6efd;
+    margin-bottom: 12px;
+}
+
+.app.dark .summary-box h2 {
+    color: #4da3ff;
+}
+
+.summary-box p {
+    color: #555;
+    font-size: 17px;
+}
+
+.app.dark .summary-box p {
+    color: #d6d6d6;
+}
+
+@media (max-width:1200px) {
+
+    .projects-container {
+        padding: 90px 7%;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .project-summary {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:992px) {
+
+    .project-header h2 {
+        font-size: 22px;
+    }
+
+    .project-footer {
+        flex-direction: column;
+    }
+
+    .github-btn,
+    .demo-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .projects-container {
+        padding: 70px 5%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-buttons {
+        gap: 12px;
+    }
+
+    .filter-buttons button {
+        width: 160px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .projects-container {
+        padding: 60px 20px;
+    }
+
+    .project-header {
+        padding: 20px;
+    }
+
+    .project-body {
+        padding: 20px;
+    }
+
+    .project-footer {
+        padding: 20px;
+    }
+
+    .project-header h2 {
+        font-size: 20px;
+    }
+
+    .technology-badge {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+
+    .summary-box {
+        padding: 22px;
+    }
+
+    .summary-box h2 {
+        font-size: 32px;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    .filter-buttons button {
+        width: 100%;
+    }
+
+    .project-category {
+        font-size: 13px;
+    }
+
+    .project-body p {
+        font-size: 15px;
+    }
+
+    .github-btn,
+    .demo-btn {
+        font-size: 14px;
+    }
+
+}

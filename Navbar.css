@@ -1,0 +1,255 @@
+.navbar {
+    width: 100%;
+    height: 75px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.app.dark .navbar {
+    background: #1a1a1a;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0d6efd;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.app.dark .logo {
+    color: #4da3ff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #222;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.app.dark .nav-links a {
+    color: #ffffff;
+}
+
+.nav-links a:hover {
+    color: #0d6efd;
+}
+
+.app.dark .nav-links a:hover {
+    color: #4da3ff;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #0d6efd;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+.app.dark .nav-links a::after {
+    background: #4da3ff;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.theme-btn {
+    padding: 10px 18px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: #084298;
+}
+
+.app.dark .theme-btn {
+    background: #4da3ff;
+    color: black;
+}
+
+.app.dark .theme-btn:hover {
+    background: #7cbcff;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #0d6efd;
+    transition: 0.3s;
+}
+
+.app.dark .menu-icon {
+    color: white;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+@media (max-width:1200px) {
+
+    .navbar {
+        padding: 0 7%;
+    }
+
+    .nav-links {
+        gap: 28px;
+    }
+
+}
+
+@media (max-width:992px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .navbar {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        gap: 0;
+        padding: 20px 0;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .app.dark .nav-links {
+        background: #1b1b1b;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 18px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .app.dark .nav-links a {
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .theme-btn {
+        margin-top: 20px;
+        width: 180px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .menu-icon {
+        font-size: 30px;
+    }
+
+    .theme-btn {
+        width: 160px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+        padding: 16px;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        font-size: 28px;
+    }
+
+    .theme-btn {
+        width: 150px;
+        font-size: 13px;
+    }
+
+}

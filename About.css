@@ -1,0 +1,369 @@
+.about-container {
+    width: 100%;
+    padding: 100px 10%;
+    background: #ffffff;
+}
+
+.app.dark .about-container {
+    background: #1b1b1b;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+.about-left,
+.about-right {
+    flex: 1;
+}
+
+.about-left h2,
+.about-right h2,
+.education-section h2,
+.objective-section h2,
+.interests-section h2,
+.strength-section h2 {
+    font-size: 32px;
+    color: #0d6efd;
+    margin-bottom: 25px;
+}
+
+.app.dark .about-left h2,
+.app.dark .about-right h2,
+.app.dark .education-section h2,
+.app.dark .objective-section h2,
+.app.dark .interests-section h2,
+.app.dark .strength-section h2 {
+    color: #4da3ff;
+}
+
+.about-left p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.app.dark .about-left p {
+    color: #d6d6d6;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.info-card {
+    background: #f8f9fa;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+}
+
+.app.dark .info-card {
+    background: #252525;
+}
+
+.info-card h4 {
+    color: #0d6efd;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.app.dark .info-card h4 {
+    color: #4da3ff;
+}
+
+.info-card p {
+    color: #555;
+    font-size: 16px;
+}
+
+.app.dark .info-card p {
+    color: #d6d6d6;
+}
+
+.education-section {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.education-card {
+    background: #f8f9fa;
+    padding: 35px;
+    border-left: 6px solid #0d6efd;
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+}
+
+.app.dark .education-card {
+    background: #252525;
+    border-left-color: #4da3ff;
+}
+
+.education-card h3 {
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.app.dark .education-card h3 {
+    color: #4da3ff;
+}
+
+.education-card h4 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.app.dark .education-card h4 {
+    color: #ffffff;
+}
+
+.education-card .college {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.education-card span {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.app.dark .education-card span {
+    color: #cccccc;
+}
+
+.education-card p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.app.dark .education-card p {
+    color: #d6d6d6;
+}
+
+.objective-section {
+    margin-bottom: 70px;
+}
+
+.objective-section p {
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+.app.dark .objective-section p {
+    color: #d6d6d6;
+}
+
+.objective-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.objective-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.objective-card:hover {
+    background: #0d6efd;
+    color: white;
+    transform: translateY(-8px);
+}
+
+.app.dark .objective-card {
+    background: #252525;
+    color: white;
+}
+
+.app.dark .objective-card:hover {
+    background: #4da3ff;
+    color: black;
+}
+
+.interests-section {
+    margin-bottom: 70px;
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 18px;
+}
+
+.interest-card {
+    background: white;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.interest-card:hover {
+    transform: scale(1.05);
+    background: #0d6efd;
+    color: white;
+}
+
+.app.dark .interest-card {
+    background: #252525;
+    color: white;
+}
+
+.app.dark .interest-card:hover {
+    background: #4da3ff;
+    color: black;
+}
+
+.strength-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.strength-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.strength-card:hover {
+    transform: translateY(-8px);
+}
+
+.app.dark .strength-card {
+    background: #252525;
+}
+
+.strength-card h3 {
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.app.dark .strength-card h3 {
+    color: #4da3ff;
+}
+
+.strength-card p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.app.dark .strength-card p {
+    color: #d6d6d6;
+}
+
+@media (max-width:1200px) {
+
+    .about-container {
+        padding: 90px 7%;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+}
+
+@media (max-width:992px) {
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .objective-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .strength-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .about-container {
+        padding: 70px 5%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .objective-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-left h2,
+    .about-right h2,
+    .education-section h2,
+    .objective-section h2,
+    .interests-section h2,
+    .strength-section h2 {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .about-container {
+        padding: 60px 20px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card,
+    .strength-card,
+    .objective-card,
+    .info-card {
+        padding: 20px;
+    }
+
+    .about-left p,
+    .objective-section p {
+        font-size: 15px;
+    }
+
+}

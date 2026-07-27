@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    width: 100%;
+    padding: 80px 10%;
+}
+
+.app {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #222;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.app.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.app.dark section {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+main {
+    width: 100%;
+}
+
+section:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.app.dark section:nth-child(even) {
+    background-color: #1b1b1b;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #0d6efd;
+}
+
+.app.dark .section-heading h1 {
+    color: #4da3ff;
+}
+
+.section-heading p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 18px;
+    color: #555;
+}
+
+.app.dark .section-heading p {
+    color: #d0d0d0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.primary-btn {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #084298;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid #0d6efd;
+    color: #0d6efd;
+}
+
+.secondary-btn:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.app.dark .secondary-btn {
+    border-color: white;
+    color: white;
+}
+
+.app.dark .secondary-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.app.dark .card {
+    background-color: #222;
+    color: white;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.shadow {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.transition {
+    transition: 0.3s ease;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ececec;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #084298;
+}
+
+.app.dark ::-webkit-scrollbar-track {
+    background: #202020;
+}
+
+.app.dark ::-webkit-scrollbar-thumb {
+    background: #4da3ff;
+}
+
+@media (max-width:1200px) {
+
+    section {
+        padding: 70px 8%;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:992px) {
+
+    section {
+        padding: 70px 6%;
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h1 {
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h1 {
+        font-size: 30px;
+    }
+
+    .section-heading p {
+        font-size: 16px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    section {
+        padding: 50px 20px;
+    }
+
+    .section-heading h1 {
+        font-size: 26px;
+    }
+
+    .section-heading p {
+        font-size: 15px;
+    }
+
+}
